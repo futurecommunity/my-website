@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>稚内・紋別 3日間の旅行プラン</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        h3 {
+            color: #764ba2;
+            font-size: 1.4em;
+            margin: 30px 0 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        h3::before {
+            content: "📍";
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        h4 {
+            color: #555;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+            padding-left: 20px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .day-section {
+            background: #f8f9ff;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .day-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .timeline-item {
+            margin: 25px 0;
+            padding-left: 30px;
+            border-left: 3px solid #667eea;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -8px;
+            top: 5px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+        
+        .time {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .spot-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #764ba2;
+            margin: 10px 0 5px 0;
+        }
+        
+        .description {
+            color: #666;
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+        
+        .distance {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin: 5px 0;
+        }
+        
+        .duration {
+            background: #fff3e0;
+            color: #f57c00;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin: 5px 5px 5px 0;
+        }
+        
+        .restaurant-list {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        
+        .restaurant-item {
+            padding: 15px;
+            margin: 10px 0;
+            background: #f5f5f5;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .restaurant-item strong {
+            color: #764ba2;
+            font-size: 1.1em;
+        }
+        
+        .info-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .info-box h4 {
+            color: #f57c00;
+            margin-top: 0;
+            border: none;
+            padding: 0;
+        }
+        
+        .tip-box {
+            background: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .tip-box h4 {
+            color: #2e7d32;
+            margin-top: 0;
+            border: none;
+            padding: 0;
+        }
+        
+        ul {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+            border-bottom: 1px dotted #667eea;
+            transition: all 0.3s;
+        }
+        
+        a:hover {
+            color: #764ba2;
+            border-bottom: 1px solid #764ba2;
+        }
+        
+        .flight-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .flight-info::before {
+            content: "✈️";
+            font-size: 1.5em;
+            margin-right: 15px;
+        }
+        
+        .summary-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 40px 20px;
+            }
+            
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .day-section {
+                padding: 20px;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            h3 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🗾 稚内・紋別 3日間の旅行プラン</h1>
+            <p>最北端の絶景とオホーツクの海の幸を満喫</p>
+        </header>
+        
+        <div class="content">
+            <div class="summary-box">
+                <h2>📅 旅程概要</h2>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><strong>4月28日（火）</strong> 福岡 → 新千歳 → 稚内（移動日）</li>
+                    <li><strong>4月29日（水）</strong> 稚内観光 → オホーツク沿岸南下 → 枝幸</li>
+                    <li><strong>4月30日（木）</strong> 枝幸 → 紋別観光 → 羽田 → 福岡</li>
+                </ul>
+            </div>
+            
+            <!-- Day 1 -->
+            <div class="day-section">
+                <div class="day-title">📆 1日目：4月28日（火） - 移動日</div>
+                
+                <div class="timeline-item">
+                    <div class="time">🛫 11:30</div>
+                    <div class="flight-info">
+                        <span>福岡空港発（ANA4813）</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🛬 13:50</div>
+                    <div class="flight-info">
+                        <span>新千歳空港着</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">✈️ 乗り継ぎ</div>
+                    <div class="description">
+                        約1時間40分の乗り継ぎ時間
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🛫 15:30</div>
+                    <div class="flight-info">
+                        <span>新千歳空港発（ANA4843）</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🛬 16:25</div>
+                    <div class="flight-info">
+                        <span>稚内空港着</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🚗 16:30-17:00</div>
+                    <div class="description">
+                        <strong>稚内空港 → 稚内市街へ</strong><br>
+                        <span class="distance">約20km、車で約30分</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🏨 17:00</div>
+                    <div class="spot-name">ドーミーイン稚内 チェックイン</div>
+                    <div class="description">
+                        住所：北海道稚内市中央2丁目7-13<br>
+                        天然温泉「天北の湯」完備
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🍽️ 18:00</div>
+                    <div class="spot-name">夕食 - 稚内グルメを堪能</div>
+                    <div class="restaurant-list">
+                        <div class="restaurant-item">
+                            <strong>1. 居酒屋 雑魚や</strong><br>
+                            新鮮な地元の海鮮料理が楽しめる人気店
+                        </div>
+                        <div class="restaurant-item">
+                            <strong>2. 丸ちゃん</strong><br>
+                            稚内で愛される地元の名店
+                        </div>
+                        <div class="restaurant-item">
+                            <strong>3. ごろう</strong><br>
+                            アットホームな雰囲気の海鮮居酒屋
+                        </div>
+                        <div class="restaurant-item">
+                            <strong>4. 車屋・源氏</strong><br>
+                            稚内の海の幸を存分に味わえる
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🛁 20:00</div>
+                    <div class="description">
+                        ホテルの温泉でリラックス<br>
+                        夜鳴きそば（21:30〜23:00）もお楽しみに
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 2 -->
+            <div class="day-section">
+                <div class="day-title">📆 2日目：4月29日（水） - 稚内観光 → オホーツク海岸線ドライブ → 枝幸</div>
+                
+                <div class="timeline-item">
+                    <div class="time">🌅 7:00-8:00</div>
+                    <div class="description">ホテルで朝食</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🚗 8:30</div>
+                    <div class="description">稚内市内観光スタート</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🌊 8:45-9:30</div>
+                    <div class="spot-name">①宗谷岬</div>
+                    <div class="description">
+                        日本本土最北端の地<br>
+                        「日本最北端の地の碑」で記念撮影必須！<br>
+                        サハリンが見えるかも
+                    </div>
+                    <span class="distance">ドーミーイン稚内から約30km、車で約40分</span>
+                    <span class="duration">所要時間：45分</span>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🌾 9:45-10:30</div>
+                    <div class="spot-name">②宗谷丘陵</div>
+                    <div class="description">
+                        なだらかな丘陵地帯に風車が並ぶ絶景<br>
+                        「白い道」：ホタテの貝殻を敷き詰めた約3kmの道<br>
+                        周氷河地形という地質学的にも貴重な場所
+                    </div>
+                    <span class="distance">宗谷岬からすぐ近く</span>
+                    <span class="duration">所要時間：45分</span>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🌅 10:45-11:30</div>
+                    <div class="spot-name">③ノシャップ岬</div>
+                    <div class="description">
+                        利尻島・礼文島を望める絶景ポイント<br>
+                        稚内灯台<br>
+                        時間があれば「わっかりうむノシャップ寒流水族館」も
+                    </div>
+                    <span class="distance">宗谷丘陵から約30km、車で約40分</span>
+                    <span class="duration">所要時間：45分</span>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🏛️ 11:45-12:15</div>
+                    <div class="spot-name">④稚内港北防波堤ドーム</div>
+                    <div class="description">
+                        古代ローマ建築のような独特のアーチ型デザイン<br>
+                        全長427m、国の土木遺産
+                    </div>
+                    <span class="distance">ノシャップ岬から約5km、車で約10分</span>
+                    <span class="duration">所要時間：30分</span>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🍽️ 12:30-13:30</div>
+                    <div class="spot-name">稚内で昼食</div>
+                    <div class="restaurant-list">
+                        <div class="restaurant-item">
+                            <strong>居酒屋 雑魚や</strong> - 新鮮な地元の海鮮料理
+                        </div>
+                        <div class="restaurant-item">
+                            <strong>丸ちゃん</strong> - 地元で愛される名店
+                        </div>
+                        <div class="restaurant-item">
+                            <strong>ごろう</strong> - アットホームな海鮮居酒屋
+                        </div>
+                        <div class="restaurant-item">
+                            <strong>車屋・源氏</strong> - 稚内の海の幸を堪能
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🚗 13:30</div>
+                    <div class="description">
+                        <strong>稚内 → 枝幸へ出発（オホーツク海沿岸ドライブ）</strong>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🌊 14:15-14:45</div>
+                    <div class="spot-name">⑤猿払村 - エサヌカ線</div>
+                    <div class="description">
+                        全長約16kmの直線道路（日本最長級）<br>
+                        電柱も信号もない、地平線まで続く絶景<br>
+                        「道の駅さるふつ公園」で休憩・ホタテの直売も
+                    </div>
+                    <span class="distance">稚内から約50km、車で約45分</span>
+                    <span class="duration">所要時間：30分</span>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🦢 15:15-15:45</div>
+                    <div class="spot-name">⑥浜頓別町 - クッチャロ湖</div>
+                    <div class="description">
+                        白鳥の飛来地として有名（春はコハクチョウの北帰行の時期）<br>
+                        「道の駅 北オホーツクはまとんべつ」で休憩
+                    </div>
+                    <span class="distance">猿払村から約30km、車で約30分</span>
+                    <span class="duration">所要時間：30分</span>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🏔️ 16:30-17:15</div>
+                    <div class="spot-name">⑦枝幸町 - 三笠山展望閣</div>
+                    <div class="description">
+                        標高172mの山頂からオホーツク海と枝幸の街を一望<br>
+                        360度のパノラマビュー<br>
+                        夕景が美しい時間帯
+                    </div>
+                    <span class="distance">浜頓別から約40km、車で約40分</span>
+                    <span class="duration">所要時間：45分</span>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🏨 17:30</div>
+                    <div class="spot-name">ホテルニュー幸林 チェックイン</div>
+                    <div class="description">
+                        オホーツク海を一望できる高台の温泉ホテル<br>
+                        住所：北海道枝幸郡枝幸町本町916
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🍽️ 18:30</div>
+                    <div class="description">
+                        ホテルで夕食（海鮮を堪能）
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 3 -->
+            <div class="day-section">
+                <div class="day-title">📆 3日目：4月30日（木） - 紋別観光 → オホーツク紋別空港 → 羽田 → 福岡</div>
+                
+                <div class="timeline-item">
+                    <div class="time">🌅 7:00-8:00</div>
+                    <div class="description">ホテルで朝食（早めに出発準備）</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🚗 8:15</div>
+                    <div class="description">
+                        <strong>ホテルニュー幸林出発 → 紋別へ</strong><br>
+                        <span class="distance">約60km、車で約1時間</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🦭 9:20-10:15</div>
+                    <div class="spot-name">①オホーツクとっかりセンター</div>
+                    <div class="description">
+                        日本唯一のアザラシ保護施設<br>
+                        かわいいアザラシに会える！<br>
+                        給餌体験（9:30または10:00の回）<br>
+                        アザラシの名前は全て宗谷管内の地名<br>
+                        住所：北海道紋別市海洋公園2
+                    </div>
+                    <span class="duration">所要時間：55分</span>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🧊 10:20-11:05</div>
+                    <div class="spot-name">②オホーツク流氷科学センターGIZA（ギザ）</div>
+                    <div class="description">
+                        流氷とオホーツクの自然を学べる体験型施設<br>
+                        <strong>-20℃の流氷体験室</strong>：濡れたタオルを振り回すと凍る体験<br>
+                        <strong>クリオネ</strong>の飼育展示は日本一<br>
+                        住所：北海道紋別市元紋別11-6
+                    </div>
+                    <span class="distance">とっかりセンターからすぐ隣</span>
+                    <span class="duration">所要時間：45分</span>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🦀 11:10-11:25</div>
+                    <div class="spot-name">③カニの爪オブジェ</div>
+                    <div class="description">
+                        紋別のシンボル、高さ12m・重さ7トン<br>
+                        記念撮影スポット<br>
+                        住所：北海道紋別市海洋公園1
+                    </div>
+                    <span class="distance">GIZAから約1km、車で約3分</span>
+                    <span class="duration">所要時間：15分</span>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🍽️ 11:30-11:50</div>
+                    <div class="spot-name">軽食・お土産購入</div>
+                    <div class="description">
+                        <strong>道の駅 オホーツク紋別</strong>で軽く食事＆お土産購入<br>
+                        または空港で昼食も可能
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🚗 12:00</div>
+                    <div class="spot-name">オホーツク紋別空港到着</div>
+                    <div class="description">
+                        <span class="distance">紋別市街から約15km、車で約10分</span><br>
+                        チェックイン・保安検査を済ませる<br>
+                        空港内で昼食も可能
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🛫 13:00</div>
+                    <div class="flight-info">
+                        <span>オホーツク紋別空港発（ANA376）</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🛬 14:50</div>
+                    <div class="flight-info">
+                        <span>羽田空港着</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🕐 羽田空港で休憩</div>
+                    <div class="description">約50分の乗り継ぎ時間</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🛫 15:40</div>
+                    <div class="flight-info">
+                        <span>羽田空港発（ANA261）</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="time">🛬 17:35</div>
+                    <div class="flight-info">
+                        <span>福岡空港着</span>
+                    </div>
+                    <div class="description" style="margin-top: 15px; font-weight: bold; color: #667eea;">
+                        お疲れ様でした！✈️
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Food Section -->
+            <div class="info-box">
+                <h2>🍴 グルメのポイント</h2>
+                
+                <h3>稚内の名物</h3>
+                <ul>
+                    <li><strong>ウニ丼</strong>（5月〜9月が旬、4月末はギリギリ）</li>
+                    <li><strong>ホタテ</strong>（通年美味しい）</li>
+                    <li><strong>タコしゃぶ</strong>（稚内名物）</li>
+                    <li><strong>チャーメン</strong>（稚内のソウルフード）</li>
+                </ul>
+                
+                <h3>枝幸・紋別の名物</h3>
+                <ul>
+                    <li><strong>毛ガニ</strong>（3〜6月、10〜12月が旬 - ちょうど旬！）</li>
+                    <li><strong>ホタテ</strong></li>
+                    <li><strong>かまぼこ</strong>（紋別のソウルフード）</li>
+                </ul>
+            </div>
+            
+            <!-- Tips Section -->
+            <div class="tip-box">
+                <h2>💡 旅のアドバイス</h2>
+                
+                <h3>総走行距離</h3>
+                <ul>
+                    <li><strong>1日目</strong>：稚内空港 → 稚内市街（約20km）</li>
+                    <li><strong>2日目</strong>：稚内市内・オホーツク沿岸 → 枝幸（約150km）</li>
+                    <li><strong>3日目</strong>：枝幸 → 紋別 → 空港（約75km）</li>
+                    <li><strong>合計</strong>：約245km</li>
+                </ul>
+                
+                <h3>服装</h3>
+                <ul>
+                    <li>4月末の気温：5〜10℃程度</li>
+                    <li>防寒着必須（ダウンジャケット、フリース）</li>
+                    <li>風が強いため防風対策も</li>
+                    <li>流氷体験室は-20℃なので、手袋があると便利</li>
+                </ul>
+                
+                <h3>タイムマネジメント</h3>
+                <ul>
+                    <li>28日は16:25に稚内空港着なので、夕方から余裕を持って市街地で過ごせます</li>
+                    <li>30日は13:00の飛行機のため、<strong>早朝8:15にホテル出発</strong>が必要です</li>
+                    <li>紋別での観光は朝のみ。効率よく3箇所を回ります</li>
+                    <li>12:00に空港到着で余裕を持ったスケジュール</li>
+                </ul>
+                
+                <h3>ガソリン</h3>
+                <ul>
+                    <li>稚内、猿払、浜頓別、枝幸、紋別でこまめに給油</li>
+                    <li>区間によってはスタンドが少ないエリアあり</li>
+                </ul>
+                
+                <h3>天候</h3>
+                <ul>
+                    <li>オホーツク海沿岸は天候が変わりやすい</li>
+                    <li>特に宗谷岬やノシャップ岬は風が強いことが多い</li>
+                    <li>天気予報をこまめにチェック</li>
+                </ul>
+            </div>
+        </div>
+        
+        <footer>
+            <p>稚内の最北端の絶景、オホーツク海岸線の雄大なドライブ、紋別のアザラシやカニなど、北海道の魅力を存分に楽しめます！🌊✨</p>
+            <p style="margin-top: 20px; font-size: 0.9em;">良い旅を！</p>
+        </footer>
+    </div>
+</body>
+</html>
